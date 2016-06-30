@@ -1,0 +1,57 @@
+<h1 class="label-white centralizar">Auto peças São Francisco</h1>
+
+<%= form_tag(autopecas_path, :method => :get) do %>
+  <%= text_field_tag 'pesquisar', nil, placeholder:'Nome do produto'%>
+  <%= submit_tag 'Pesquisar pelo nome do produto'%>
+<% end %>
+<br>
+<br>
+
+<%= link_to 'Cadastrar nova peça', new_autopeca_path, class: "btn-aguiar"%>
+
+<br>
+<br>
+
+<table border="1" style="width:100%">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Num fabrica</th>
+      <th>Montadora</th>
+      <th>Aplicacao</th>
+      <th>Valor compra</th>
+      <th>Valor venda</th>
+      <th>Codigo peca</th>
+      <th>Estoque</th>
+      <th>Grupo</th>
+      <th>Info</th>
+      <th>Pratileira</th>
+      <th colspan="3">-- Ações --</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @autopecas.each do |autopeca| %>
+      <tr>
+        <td><%= autopeca.nome %></td>
+        <td><%= autopeca.num_fabrica %></td>
+        <td><%= autopeca.montadora %></td>
+        <td><%= autopeca.aplicacao %></td>
+        <td><%= autopeca.valor_compra %></td>
+        <td><%= autopeca.valor_venda %></td>
+        <td><%= autopeca.codigo_peca %></td>
+        <td><%= autopeca.estoque %></td>
+        <td><%= autopeca.grupo %></td>
+        <td><%= autopeca.info %></td>
+        <td><%= autopeca.pratileira %></td>
+        <!--<td><%= link_to 'Venda realizada',selling_path(:id => autopeca.id),method: :put, data: { confirm: 'Confirmar venda?' }  %></td> -->
+
+        <td><%= link_to 'Realizar venda',remote: true %></td>
+        <td><%= link_to 'Ver detalhes', autopeca %></td>
+        <td><%= link_to 'Deletar peça', autopeca, method: :delete, data: { confirm: 'Você deseja deletar?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  </table>
+
+  <br>

@@ -1,0 +1,2 @@
+module AutopecasHelper
+end

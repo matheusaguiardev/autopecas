@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<div>
+<p>
+  <strong>Nome: </strong>
+  <%= @autopeca.nome %>
+</p>
+
+<p>
+  <strong>Num fabrica:</strong>
+  <%= @autopeca.num_fabrica %>
+</p>
+
+<p>
+  <strong>Montadora:</strong>
+  <%= @autopeca.montadora %>
+</p>
+
+<p>
+  <strong>Aplicacao:</strong>
+  <%= @autopeca.aplicacao %>
+</p>
+
+<p>
+  <strong>Valor compra:</strong>
+  <%= @autopeca.valor_compra %>
+</p>
+
+<p>
+  <strong>Valor venda:</strong>
+  <%= @autopeca.valor_venda %>
+</p>
+
+<p>
+  <strong>Codigo peca:</strong>
+  <%= @autopeca.codigo_peca %>
+</p>
+
+<p>
+  <strong>Estoque:</strong>
+  <%= @autopeca.estoque %>
+</p>
+
+<p>
+  <strong>Grupo:</strong>
+  <%= @autopeca.grupo %>
+</p>
+
+<p>
+  <strong>Info:</strong>
+  <%= @autopeca.info %>
+</p>
+
+<p>
+  <strong>Pratileira:</strong>
+  <%= @autopeca.pratileira %>
+</p>
+
+<%= link_to 'Corrigir', edit_autopeca_path(@autopeca) , :class=> 'label-white btn btn-warning'%> |
+<%= link_to 'Voltar', autopecas_path , :class=> 'label-white btn btn-danger'%>
+</div>

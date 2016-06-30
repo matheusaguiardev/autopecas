@@ -1,0 +1,95 @@
+<%= form_for(@autopeca) do |f| %>
+  <% if @autopeca.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@autopeca.errors.count, "error") %> Não é possível salvar esse produto:</h2>
+
+      <ul>
+      <% @autopeca.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div  id="main" class="container-fluid">
+     <h3 class="page-header"></h3>
+     <!-- area de campos do form -->
+     <div class="row">
+      <div class="form-group col-md-4">
+        <%= f.label :nome ,'Nome da peça' , :class=> 'label-black'%>
+        <%= f.text_field :nome, :title=>'Digite o nome do produto', :class=> 'form-control' %>
+      </div>
+
+      <div class="form-group col-md-4">
+        <%= f.label :num_fabrica ,'Número de fábrica', :class=> 'label-black' %>
+        <%= f.text_field :num_fabrica , :class=> 'form-control'%>
+      </div>
+
+      <div class="form-group col-md-4">
+        <%= f.label :montadora, 'Montadora' , :class=> 'label-black'%>
+        <%= f.text_field :montadora , :class=> 'form-control'%>
+      </div>
+      <div class="form-group col-md-4">
+        <%= f.label :aplicacao , 'Aplicação da peça' , :class=> 'label-black' %>
+        <%= f.text_area :aplicacao , :class=> 'form-control'%>
+      </div>
+
+      <div class="form-group col-md-4">
+        <%= f.label :valor_compra, 'Valor de compra.', :class=> 'label-black' %>
+        <div class="input-group">
+            <div class="input-group-addon">R$</div>
+              <%= f.text_field :valor_compra , :class=> 'form-control'%>
+
+
+        </div>
+      </div>
+
+      <div class="form-group col-md-4">
+        <%= f.label :valor_venda, 'Valor de venda', :class=> 'label-black' %>
+         <div class="input-group">
+        <div class="input-group-addon">R$</div>
+        <%= f.text_field :valor_venda , :class=> 'form-control'%>
+
+      </div>
+      </div>
+
+      <div class="form-group col-md-4">
+        <%= f.label :codigo_peca ,'Código do produto' , :class=> 'label-black'%>
+        <%= f.text_field :codigo_peca , :class=> 'form-control'%>
+      </div>
+
+      <div class="form-group col-md-4">
+        <%= f.label :estoque, 'Quantidade em estoque' , :class=> 'label-black'%>
+        <%= f.number_field :estoque , :class=> 'form-control'%>
+      </div>
+
+      <div class="form-group col-md-4">
+        <%= f.label :grupo, 'Grupo' , :class=> 'label-black' %>
+        <%= f.text_field :grupo , :class=> 'form-control'%>
+      </div>
+
+      <div class="form-group col-md-6">
+        <%= f.label :info, 'Informações sobre o produto', :class=> 'label-black' %>
+        <%= f.text_area :info , :class=> 'form-control'%>
+      </div>
+
+      <div class="form-group col-md-6">
+        <%= f.label :pratileira, 'Código da pratileira' , :class=> 'label-black'%>
+        <%= f.text_field :pratileira , :class=> 'form-control'%>
+      </div>
+
+
+    </div>
+
+    <hr />
+     <div id="actions" class="row">
+       <div class="col-md-12">
+         <div class="actions">
+           <%= f.submit 'Salvar', :class=>'btn btn-primary '%>
+              <%= link_to 'Cancelar', autopecas_path, :class=>'btn btn-default'%>
+         </div>
+       </div>
+     </div>
+
+<% end %>
