@@ -1,61 +1,39 @@
-<p id="notice"><%= notice %></p>
-
-<div>
-<p>
-  <strong>Nome: </strong>
-  <%= @autopeca.nome %>
-</p>
-
-<p>
-  <strong>Num fabrica:</strong>
-  <%= @autopeca.num_fabrica %>
-</p>
-
-<p>
-  <strong>Montadora:</strong>
-  <%= @autopeca.montadora %>
-</p>
-
-<p>
-  <strong>Aplicacao:</strong>
-  <%= @autopeca.aplicacao %>
-</p>
-
-<p>
-  <strong>Valor compra:</strong>
-  <%= @autopeca.valor_compra %>
-</p>
-
-<p>
-  <strong>Valor venda:</strong>
-  <%= @autopeca.valor_venda %>
-</p>
-
-<p>
-  <strong>Codigo peca:</strong>
-  <%= @autopeca.codigo_peca %>
-</p>
-
-<p>
-  <strong>Estoque:</strong>
-  <%= @autopeca.estoque %>
-</p>
-
-<p>
-  <strong>Grupo:</strong>
-  <%= @autopeca.grupo %>
-</p>
-
-<p>
-  <strong>Info:</strong>
-  <%= @autopeca.info %>
-</p>
-
-<p>
-  <strong>Pratileira:</strong>
-  <%= @autopeca.pratileira %>
-</p>
-
-<%= link_to 'Corrigir', edit_autopeca_path(@autopeca) , :class=> 'label-white btn btn-warning'%> |
-<%= link_to 'Voltar', autopecas_path , :class=> 'label-white btn btn-danger'%>
+<%- model_class = Autopeca -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
 </div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:nome) %>:</strong></dt>
+  <dd><%= @autopeca.nome %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:num_fabrica) %>:</strong></dt>
+  <dd><%= @autopeca.num_fabrica %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:montadora) %>:</strong></dt>
+  <dd><%= @autopeca.montadora %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:aplicacao) %>:</strong></dt>
+  <dd><%= @autopeca.aplicacao %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:valor_compra) %>:</strong></dt>
+  <dd><%= @autopeca.valor_compra %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:valor_venda) %>:</strong></dt>
+  <dd><%= @autopeca.valor_venda %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:codigo_peca) %>:</strong></dt>
+  <dd><%= @autopeca.codigo_peca %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:estoque) %>:</strong></dt>
+  <dd><%= @autopeca.estoque %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:grupo) %>:</strong></dt>
+  <dd><%= @autopeca.grupo %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:info) %>:</strong></dt>
+  <dd><%= @autopeca.info %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pratileira) %>:</strong></dt>
+  <dd><%= @autopeca.pratileira %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              autopecas_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_autopeca_path(@autopeca), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              autopeca_path(@autopeca),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

@@ -1,38 +1,38 @@
-<h1 class="label-white centralizar">Auto peças São Francisco</h1>
-
+<%- model_class = Autopeca -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<div>
 <%= form_tag(autopecas_path, :method => :get) do %>
-  <%= text_field_tag 'pesquisar', nil, placeholder:'Nome do produto'%>
-  <%= submit_tag 'Pesquisar pelo nome do produto'%>
-<% end %>
+  <%= text_field_tag 'pesquisar', nil, placeholder: 'Nome do produto...'%>
+  <%= submit_tag "Pesquisar"%>
+<%end%>
 <br>
 <br>
-
-<%= link_to 'Cadastrar nova peça', new_autopeca_path, class: "btn-aguiar"%>
-
-<br>
-<br>
-
-<table border="1" style="width:100%">
+</div>
+<table class=" table-striped table-custom">
   <thead>
     <tr>
-      <th>Nome</th>
-      <th>Num fabrica</th>
-      <th>Montadora</th>
-      <th>Aplicacao</th>
-      <th>Valor compra</th>
-      <th>Valor venda</th>
-      <th>Codigo peca</th>
-      <th>Estoque</th>
-      <th>Grupo</th>
-      <th>Info</th>
-      <th>Pratileira</th>
-      <th colspan="3">-- Ações --</th>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:nome) %></th>
+      <th><%= model_class.human_attribute_name(:num_fabrica) %></th>
+      <th><%= model_class.human_attribute_name(:montadora) %></th>
+      <th><%= model_class.human_attribute_name(:aplicacao) %></th>
+      <th><%= model_class.human_attribute_name(:valor_compra) %></th>
+      <th><%= model_class.human_attribute_name(:valor_venda) %></th>
+      <th><%= model_class.human_attribute_name(:codigo_peca) %></th>
+      <th><%= model_class.human_attribute_name(:estoque) %></th>
+      <th><%= model_class.human_attribute_name(:grupo) %></th>
+      <th><%= model_class.human_attribute_name(:info) %></th>
+      <th><%= model_class.human_attribute_name(:pratileira) %></th>
+
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @autopecas.each do |autopeca| %>
       <tr>
+        <td><%= link_to autopeca.id, autopeca_path(autopeca) %></td>
         <td><%= autopeca.nome %></td>
         <td><%= autopeca.num_fabrica %></td>
         <td><%= autopeca.montadora %></td>
@@ -44,14 +44,22 @@
         <td><%= autopeca.grupo %></td>
         <td><%= autopeca.info %></td>
         <td><%= autopeca.pratileira %></td>
-        <!--<td><%= link_to 'Venda realizada',selling_path(:id => autopeca.id),method: :put, data: { confirm: 'Confirmar venda?' }  %></td> -->
-
-        <td><%= link_to 'Realizar venda',remote: true %></td>
-        <td><%= link_to 'Ver detalhes', autopeca %></td>
-        <td><%= link_to 'Deletar peça', autopeca, method: :delete, data: { confirm: 'Você deseja deletar?' } %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_autopeca_path(autopeca), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      autopeca_path(autopeca),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
       </tr>
     <% end %>
   </tbody>
-  </table>
 
-  <br>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_autopeca_path,
+            :class => 'btn btn-primary' %>
+            <br>

@@ -8,7 +8,9 @@ class AutopecasController < ApplicationController
     if params[:pesquisar]
       @autopecas = Autopeca.pesquisar(params[:pesquisar])
     else
-      @autopecas = Autopeca.all
+        # or, use an explicit "per page" limit:
+        #@autopecas = Autopeca.all.paginate(:page => params[:page], :per_page => 10)
+      @autopecas = Autopeca.all.paginate(:page => params[:page])
     end
   end
 
@@ -35,9 +37,11 @@ class AutopecasController < ApplicationController
       if @autopeca.save
         format.html { redirect_to @autopeca, notice: 'Produto cadastrado com sucesso.' }
         format.json { render :show, status: :created, location: @autopeca }
+        #format.js # views/autopecas/create.js.erb
       else
         format.html { render :new }
         format.json { render json: @autopeca.errors, status: :unprocessable_entity }
+        #format.js
       end
     end
   end

@@ -1,95 +1,106 @@
 <%= form_for(@autopeca) do |f| %>
-  <% if @autopeca.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@autopeca.errors.count, "error") %> Não é possível salvar esse produto:</h2>
 
-      <ul>
-      <% @autopeca.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+
+
+  <% if @autopeca.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@autopeca.errors.count, "error") %> prohibited this autopeca from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @autopeca.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
     </div>
   <% end %>
 
-
-  <div  id="main" class="container-fluid">
-     <h3 class="page-header"></h3>
-     <!-- area de campos do form -->
-     <div class="row">
-      <div class="form-group col-md-4">
-        <%= f.label :nome ,'Nome da peça' , :class=> 'label-black'%>
-        <%= f.text_field :nome, :title=>'Digite o nome do produto', :class=> 'form-control' %>
-      </div>
-
-      <div class="form-group col-md-4">
-        <%= f.label :num_fabrica ,'Número de fábrica', :class=> 'label-black' %>
-        <%= f.text_field :num_fabrica , :class=> 'form-control'%>
-      </div>
-
-      <div class="form-group col-md-4">
-        <%= f.label :montadora, 'Montadora' , :class=> 'label-black'%>
-        <%= f.text_field :montadora , :class=> 'form-control'%>
-      </div>
-      <div class="form-group col-md-4">
-        <%= f.label :aplicacao , 'Aplicação da peça' , :class=> 'label-black' %>
-        <%= f.text_area :aplicacao , :class=> 'form-control'%>
-      </div>
-
-      <div class="form-group col-md-4">
-        <%= f.label :valor_compra, 'Valor de compra.', :class=> 'label-black' %>
-        <div class="input-group">
-            <div class="input-group-addon">R$</div>
-              <%= f.text_field :valor_compra , :class=> 'form-control'%>
-
-
-        </div>
-      </div>
-
-      <div class="form-group col-md-4">
-        <%= f.label :valor_venda, 'Valor de venda', :class=> 'label-black' %>
-         <div class="input-group">
-        <div class="input-group-addon">R$</div>
-        <%= f.text_field :valor_venda , :class=> 'form-control'%>
-
-      </div>
-      </div>
-
-      <div class="form-group col-md-4">
-        <%= f.label :codigo_peca ,'Código do produto' , :class=> 'label-black'%>
-        <%= f.text_field :codigo_peca , :class=> 'form-control'%>
-      </div>
-
-      <div class="form-group col-md-4">
-        <%= f.label :estoque, 'Quantidade em estoque' , :class=> 'label-black'%>
-        <%= f.number_field :estoque , :class=> 'form-control'%>
-      </div>
-
-      <div class="form-group col-md-4">
-        <%= f.label :grupo, 'Grupo' , :class=> 'label-black' %>
-        <%= f.text_field :grupo , :class=> 'form-control'%>
-      </div>
-
-      <div class="form-group col-md-6">
-        <%= f.label :info, 'Informações sobre o produto', :class=> 'label-black' %>
-        <%= f.text_area :info , :class=> 'form-control'%>
-      </div>
-
-      <div class="form-group col-md-6">
-        <%= f.label :pratileira, 'Código da pratileira' , :class=> 'label-black'%>
-        <%= f.text_field :pratileira , :class=> 'form-control'%>
-      </div>
-
-
+  <div class="form-group">
+    <%= f.label :nome, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :nome, :class => 'form-control' %>
     </div>
+    <%=f.error_span(:nome) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :num_fabrica, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :num_fabrica, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:num_fabrica) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :montadora, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :montadora, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:montadora) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :aplicacao, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :aplicacao, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:aplicacao) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :valor_compra, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :valor_compra, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:valor_compra) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :valor_venda, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :valor_venda, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:valor_venda) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :codigo_peca, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :codigo_peca, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:codigo_peca) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :estoque, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :estoque, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:estoque) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :grupo, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :grupo, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:grupo) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :info, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_area :info, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:info) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :pratileira, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :pratileira, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:pratileira) %>
+  </div>
 
-    <hr />
-     <div id="actions" class="row">
-       <div class="col-md-12">
-         <div class="actions">
-           <%= f.submit 'Salvar', :class=>'btn btn-primary '%>
-              <%= link_to 'Cancelar', autopecas_path, :class=>'btn btn-default'%>
-         </div>
-       </div>
-     </div>
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                autopecas_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
 
 <% end %>
