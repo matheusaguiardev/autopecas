@@ -1,14 +1,12 @@
 
-if(qntdEstoque > 0){
-  var qntdEstoque = <%= @autopeca.estoque - 1 %>
-  alert('true!');
-  <%= @autopeca.update_attribute(:estoque, @autopeca.estoque - 1)%>
-}else{
-  alert("Não temos em estoque: " + <%= @autopeca.nome %>);
-  setTimeout(function(){
-    alert('else!');
-  },2000);
+var qntdEstoque = <%= @autopeca.estoque - 1 %>
+//var nomePeca = <%= @autopeca.nome%>
 
+//alert(qntdEstoque);
+//alert(''+ nomePeca);
 
-$("#table-peca").load(location.href + " #table-peca");
+if(qntdEstoque <= 0) {
+  alert("Não tem em estoque");
+} else {
+    <%= @autopeca.update_attribute(:estoque, @autopeca.estoque - 1)%>
 }
