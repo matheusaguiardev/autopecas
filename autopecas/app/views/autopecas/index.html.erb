@@ -7,9 +7,11 @@
   <%= text_field_tag 'pesquisar', nil, placeholder: 'Nome do produto...'%>
   <%= submit_tag "Pesquisar"%>
 <%end%>
+
 <br>
 <br>
 </div>
+<div id="table-peca">
 <table class=" table-striped table-custom">
   <thead>
     <tr>
@@ -45,6 +47,11 @@
         <td><%= autopeca.info %></td>
         <td><%= autopeca.pratileira %></td>
         <td>
+
+          <%= link_to t('.sell', :default => t("helpers.links.sell")),
+                      selling_path(autopeca), :class => 'btn btn-default btn-xs',remote: true, method: :put %>
+
+
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_autopeca_path(autopeca), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
@@ -58,7 +65,7 @@
   </tbody>
 
 </table>
-
+</div>
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_autopeca_path,
             :class => 'btn btn-primary' %>

@@ -1,5 +1,5 @@
 class AutopecasController < ApplicationController
-  before_action :set_autopeca, only: [:show, :edit, :update, :destroy,:selling]
+  before_action :set_autopeca, only: [:show, :edit, :update, :destroy, :selling]
   respond_to :html, :js
 
   # GET /autopecas
@@ -37,7 +37,7 @@ class AutopecasController < ApplicationController
       if @autopeca.save
         format.html { redirect_to @autopeca, notice: 'Produto cadastrado com sucesso.' }
         format.json { render :show, status: :created, location: @autopeca }
-        #format.js # views/autopecas/create.js.erb
+        format.js # views/autopecas/create.js.erb
       else
         format.html { render :new }
         format.json { render json: @autopeca.errors, status: :unprocessable_entity }
@@ -61,8 +61,9 @@ class AutopecasController < ApplicationController
   end
 
   def selling
-    @autopeca.estoque = @autopeca.estoque - 1
-    @autopeca.save
+    respond_to do |format|
+        format.js
+    end
   end
 
   # DELETE /autopecas/1

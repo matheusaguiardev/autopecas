@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root 'autopecas#index'
 
-  put '#index' => 'autopecas#selling', as: :selling
+  put 'autopecas/venda/:id' => 'autopecas#selling' , as: :selling
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

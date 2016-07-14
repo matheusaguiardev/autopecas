@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-30.times do |i|
+5.times do |i|
   puts "cadastrado de peça - #{i}"
   user_name = Faker::App.name
   vahicle = Faker::Vehicle.manufacture

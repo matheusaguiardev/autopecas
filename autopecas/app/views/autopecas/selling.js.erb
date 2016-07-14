@@ -1,0 +1,14 @@
+
+if(qntdEstoque > 0){
+  var qntdEstoque = <%= @autopeca.estoque - 1 %>
+  alert('true!');
+  <%= @autopeca.update_attribute(:estoque, @autopeca.estoque - 1)%>
+}else{
+  alert("Não temos em estoque: " + <%= @autopeca.nome %>);
+  setTimeout(function(){
+    alert('else!');
+  },2000);
+
+
+$("#table-peca").load(location.href + " #table-peca");
+}

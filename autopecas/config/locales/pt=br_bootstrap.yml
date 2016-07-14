@@ -10,6 +10,7 @@
   helpers:
     actions: "Ações"
     links:
+      sell: "Vender"
       back: "Voltar"
       cancel: "Cancelar"
       confirm: "Tem certeza?"
