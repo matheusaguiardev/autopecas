@@ -5,10 +5,9 @@
 //alert(''+ nomePeca);
 
 var qntdEstoque = <%=@autopeca.estoque%>
+var nomePeca =  '<%= @autopeca.nome %>'
 if(qntdEstoque < 1) {
-    alert("Não tem em estoque");
-} else {
-    <%= @autopeca.update_attribute(:estoque, @autopeca.estoque - 1)%>
+    alert( nomePeca + " -- Estoque está em falta !!");
 }
 
 setTimeout(function(){

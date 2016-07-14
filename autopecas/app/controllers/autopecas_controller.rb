@@ -8,9 +8,9 @@ class AutopecasController < ApplicationController
     if params[:pesquisar]
       @autopecas = Autopeca.pesquisar(params[:pesquisar])
     else
+      @autopecas = Autopeca.all
         # or, use an explicit "per page" limit:
         #@autopecas = Autopeca.all.paginate(:page => params[:page], :per_page => 10)
-      @autopecas = Autopeca.all.paginate(:page => params[:page])
     end
   end
 
@@ -61,6 +61,9 @@ class AutopecasController < ApplicationController
   end
 
   def selling
+    if @autopeca.estoque > 0
+      @autopeca.update_attribute(:estoque, @autopeca.estoque - 1)
+    end
     respond_to do |format|
         format.js
     end
