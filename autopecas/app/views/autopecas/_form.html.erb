@@ -1,7 +1,5 @@
 <%= form_for(@autopeca) do |f| %>
 
-
-
   <% if @autopeca.errors.any? %>
     <div id="error_expl" class="panel panel-danger">
       <div class="panel-heading">
@@ -48,14 +46,14 @@
   <div class="form-group">
     <%= f.label :valor_compra, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :valor_compra, :class => 'form-control' %>
+      <%= f.text_field :valor_compra, :class => 'form-control',:value => "R$ " %>
     </div>
     <%=f.error_span(:valor_compra) %>
   </div>
   <div class="form-group">
     <%= f.label :valor_venda, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :valor_venda, :class => 'form-control' %>
+      <%= f.text_field :valor_venda, :class => 'form-control',:value => "R$ "  %>
     </div>
     <%=f.error_span(:valor_venda) %>
   </div>
