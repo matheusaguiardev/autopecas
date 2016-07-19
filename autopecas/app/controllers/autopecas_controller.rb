@@ -7,6 +7,8 @@ class AutopecasController < ApplicationController
   def index
     if params[:pesquisar]
       @autopecas = Autopeca.pesquisar(params[:pesquisar])
+    elsif params[:pecas]
+      @autopecas = Autopeca.faltapeca(params[:pecas])
     else
       @autopecas = Autopeca.all
         # or, use an explicit "per page" limit:

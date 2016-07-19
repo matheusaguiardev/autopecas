@@ -7,7 +7,7 @@
 var qntdEstoque = <%=@autopeca.estoque%>
 var nomePeca =  '<%= @autopeca.nome %>'
 if(qntdEstoque < 1) {
-    alert( nomePeca + " -- Estoque está em falta !!");
+    alert( nomePeca + " -> Estoque está em falta !!");
 }
 
 setTimeout(function(){
