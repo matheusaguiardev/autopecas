@@ -41957,3 +41957,734 @@ ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
   Rendered /home/matheus/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.7ms)
   Rendered /home/matheus/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (52.1ms)
   Rendered /home/matheus/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (105.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-27 18:44:55 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AutopecasController#index as HTML
+  [1m[35mAutopeca Load (0.4ms)[0m  SELECT "autopecas".* FROM "autopecas"
+  Rendered autopecas/index.html.erb within layouts/application (928.4ms)
+Completed 200 OK in 2824ms (Views: 2802.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2017-03-27 18:44:58 -0300
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2017-03-27 18:44:58 -0300
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2017-03-27 18:44:58 -0300
+
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/matheusaguiar/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/matheusaguiar/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/matheusaguiar/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.1ms)
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (146.8ms)
+
+
+Started PUT "/autopecas/venda/2" for 127.0.0.1 at 2017-03-27 18:45:13 -0300
+Processing by AutopecasController#selling as JS
+  Parameters: {"id"=>"2"}
+  [1m[36mAutopeca Load (0.7ms)[0m  [1mSELECT  "autopecas".* FROM "autopecas"  WHERE "autopecas"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered autopecas/selling.js.erb (1.1ms)
+Completed 200 OK in 26ms (Views: 22.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-27 18:45:16 -0300
+Processing by AutopecasController#index as HTML
+  [1m[35mAutopeca Load (0.6ms)[0m  SELECT "autopecas".* FROM "autopecas"
+  Rendered autopecas/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 104ms (Views: 102.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2017-03-27 18:45:16 -0300
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2017-03-27 18:45:16 -0300
+
+
+Started GET "/autopecas?utf8=%E2%9C%93&pecas=&commit=Ver" for 127.0.0.1 at 2017-03-27 18:45:26 -0300
+Processing by AutopecasController#index as HTML
+  Parameters: {"utf8"=>"✓", "pecas"=>"", "commit"=>"Ver"}
+  [1m[36mAutopeca Load (0.3ms)[0m  [1mSELECT "autopecas".* FROM "autopecas"  WHERE (estoque like 0)[0m
+  Rendered autopecas/index.html.erb within layouts/application (78.2ms)
+Completed 200 OK in 144ms (Views: 137.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2017-03-27 18:45:26 -0300
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2017-03-27 18:45:26 -0300
+
+
+Started POST "/autopecas/" for 172.16.13.111 at 2017-03-27 18:46:57 -0300
+Processing by AutopecasController#create as */*
+  Parameters: {"nome"=>"TESTE CRIADO DE LONGE MAC", "num_fabrica"=>"numf", "montadora"=>"mon", "aplicacao"=>"apl", "valor_compra"=>"R$ 100,00", "valor_venda"=>"R$ 1.000,00", "codigo_peca"=>"cod", "estoque"=>20, "grupo"=>"grupo", "info"=>"info", "pratileira"=>"pratileira", "autopeca"=>{"nome"=>"TESTE CRIADO DE LONGE MAC", "num_fabrica"=>"numf", "montadora"=>"mon", "aplicacao"=>"apl", "valor_compra"=>"R$ 100,00", "valor_venda"=>"R$ 1.000,00", "codigo_peca"=>"cod", "estoque"=>20, "grupo"=>"grupo", "info"=>"info", "pratileira"=>"pratileira"}}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.1.8) lib/action_controller/metal/request_forgery_protection.rb:176:in `handle_unverified_request'
+  actionpack (4.1.8) lib/action_controller/metal/request_forgery_protection.rb:202:in `handle_unverified_request'
+  actionpack (4.1.8) lib/action_controller/metal/request_forgery_protection.rb:197:in `verify_authenticity_token'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:424:in `block in make_lambda'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:160:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/matheusaguiar/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/matheusaguiar/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/matheusaguiar/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (112.7ms)
+
+
+Started POST "/autopecas/" for 172.16.13.111 at 2017-03-27 18:47:47 -0300
+Processing by AutopecasController#create as */*
+  Parameters: {"nome"=>"TESTE CRIADO DE LONGE MAC", "num_fabrica"=>"numf", "montadora"=>"mon", "aplicacao"=>"apl", "valor_compra"=>"R$ 100,00", "valor_venda"=>"R$ 1.000,00", "codigo_peca"=>"cod", "estoque"=>20, "grupo"=>"grupo", "info"=>"info", "pratileira"=>"pratileira", "autopeca"=>{"nome"=>"TESTE CRIADO DE LONGE MAC", "num_fabrica"=>"numf", "montadora"=>"mon", "aplicacao"=>"apl", "valor_compra"=>"R$ 100,00", "valor_venda"=>"R$ 1.000,00", "codigo_peca"=>"cod", "estoque"=>20, "grupo"=>"grupo", "info"=>"info", "pratileira"=>"pratileira"}}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 2ms
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.1.8) lib/action_controller/metal/request_forgery_protection.rb:176:in `handle_unverified_request'
+  actionpack (4.1.8) lib/action_controller/metal/request_forgery_protection.rb:202:in `handle_unverified_request'
+  actionpack (4.1.8) lib/action_controller/metal/request_forgery_protection.rb:197:in `verify_authenticity_token'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:424:in `block in make_lambda'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:160:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/matheusaguiar/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/matheusaguiar/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/matheusaguiar/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (109.9ms)
+
+
+Started POST "/autopecas/" for 172.16.13.111 at 2017-03-27 19:02:22 -0300
+Processing by AutopecasController#create as */*
+  Parameters: {"nome"=>"TESTE CRIADO DE LONGE MAC", "num_fabrica"=>"numf", "montadora"=>"mon", "aplicacao"=>"apl", "valor_compra"=>"R$ 100,00", "valor_venda"=>"R$ 1.000,00", "codigo_peca"=>"cod", "estoque"=>20, "grupo"=>"grupo", "info"=>"info", "pratileira"=>"pratileira", "autopeca"=>{"nome"=>"TESTE CRIADO DE LONGE MAC", "num_fabrica"=>"numf", "montadora"=>"mon", "aplicacao"=>"apl", "valor_compra"=>"R$ 100,00", "valor_venda"=>"R$ 1.000,00", "codigo_peca"=>"cod", "estoque"=>20, "grupo"=>"grupo", "info"=>"info", "pratileira"=>"pratileira"}}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.1.8) lib/action_controller/metal/request_forgery_protection.rb:176:in `handle_unverified_request'
+  actionpack (4.1.8) lib/action_controller/metal/request_forgery_protection.rb:202:in `handle_unverified_request'
+  actionpack (4.1.8) lib/action_controller/metal/request_forgery_protection.rb:197:in `verify_authenticity_token'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:424:in `block in make_lambda'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:160:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/matheusaguiar/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/matheusaguiar/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/matheusaguiar/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (111.0ms)
+
+
+Started POST "/autopecas/" for 172.16.13.111 at 2017-03-27 19:04:29 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AutopecasController#create as */*
+  Parameters: {"nome"=>"TESTE CRIADO DE LONGE MAC", "num_fabrica"=>"numf", "montadora"=>"mon", "aplicacao"=>"apl", "valor_compra"=>"R$ 100,00", "valor_venda"=>"R$ 1.000,00", "codigo_peca"=>"cod", "estoque"=>20, "grupo"=>"grupo", "info"=>"info", "pratileira"=>"pratileira", "autopeca"=>{"nome"=>"TESTE CRIADO DE LONGE MAC", "num_fabrica"=>"numf", "montadora"=>"mon", "aplicacao"=>"apl", "valor_compra"=>"R$ 100,00", "valor_venda"=>"R$ 1.000,00", "codigo_peca"=>"cod", "estoque"=>20, "grupo"=>"grupo", "info"=>"info", "pratileira"=>"pratileira"}}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 19ms
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.1.8) lib/action_controller/metal/request_forgery_protection.rb:176:in `handle_unverified_request'
+  actionpack (4.1.8) lib/action_controller/metal/request_forgery_protection.rb:202:in `handle_unverified_request'
+  actionpack (4.1.8) lib/action_controller/metal/request_forgery_protection.rb:197:in `verify_authenticity_token'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:424:in `block in make_lambda'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:160:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/matheusaguiar/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/matheusaguiar/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/matheusaguiar/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (112.0ms)
+
+
+Started POST "/autopecas/" for 172.16.13.111 at 2017-03-27 19:08:32 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+SyntaxError (/Users/matheusaguiar/Desktop/Projetos/RubyOnRails/autopecas/autopecas/app/controllers/application_controller.rb:4: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  protect_from_forgery prepend: false with: :exception
+                                          ^):
+  app/controllers/application_controller.rb:4: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  app/controllers/autopecas_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (20.2ms)
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (130.3ms)
+
+
+Started POST "/autopecas/" for 172.16.13.111 at 2017-03-27 19:08:56 -0300
+
+SyntaxError (/Users/matheusaguiar/Desktop/Projetos/RubyOnRails/autopecas/autopecas/app/controllers/application_controller.rb:4: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  protect_from_forgery prepend: true with: :exception
+                                         ^):
+  app/controllers/application_controller.rb:4: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  app/controllers/autopecas_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (108.7ms)
+
+
+Started POST "/autopecas/" for 172.16.13.111 at 2017-03-27 19:09:49 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AutopecasController#create as */*
+  Parameters: {"nome"=>"TESTE CRIADO DE LONGE MAC", "num_fabrica"=>"numf", "montadora"=>"mon", "aplicacao"=>"apl", "valor_compra"=>"R$ 100,00", "valor_venda"=>"R$ 1.000,00", "codigo_peca"=>"cod", "estoque"=>20, "grupo"=>"grupo", "info"=>"info", "pratileira"=>"pratileira", "autopeca"=>{"nome"=>"TESTE CRIADO DE LONGE MAC", "num_fabrica"=>"numf", "montadora"=>"mon", "aplicacao"=>"apl", "valor_compra"=>"R$ 100,00", "valor_venda"=>"R$ 1.000,00", "codigo_peca"=>"cod", "estoque"=>20, "grupo"=>"grupo", "info"=>"info", "pratileira"=>"pratileira"}}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 18ms
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.1.8) lib/action_controller/metal/request_forgery_protection.rb:176:in `handle_unverified_request'
+  actionpack (4.1.8) lib/action_controller/metal/request_forgery_protection.rb:202:in `handle_unverified_request'
+  actionpack (4.1.8) lib/action_controller/metal/request_forgery_protection.rb:197:in `verify_authenticity_token'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:424:in `block in make_lambda'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:160:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/matheusaguiar/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/matheusaguiar/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/matheusaguiar/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/matheusaguiar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (111.5ms)
+
+
+Started POST "/autopecas/" for 172.16.13.111 at 2017-03-27 19:11:01 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AutopecasController#create as */*
+  Parameters: {"nome"=>"TESTE CRIADO DE LONGE MAC", "num_fabrica"=>"numf", "montadora"=>"mon", "aplicacao"=>"apl", "valor_compra"=>"R$ 100,00", "valor_venda"=>"R$ 1.000,00", "codigo_peca"=>"cod", "estoque"=>20, "grupo"=>"grupo", "info"=>"info", "pratileira"=>"pratileira", "autopeca"=>{"nome"=>"TESTE CRIADO DE LONGE MAC", "num_fabrica"=>"numf", "montadora"=>"mon", "aplicacao"=>"apl", "valor_compra"=>"R$ 100,00", "valor_venda"=>"R$ 1.000,00", "codigo_peca"=>"cod", "estoque"=>20, "grupo"=>"grupo", "info"=>"info", "pratileira"=>"pratileira"}}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "autopecas" ("aplicacao", "codigo_peca", "created_at", "estoque", "grupo", "info", "montadora", "nome", "num_fabrica", "pratileira", "updated_at", "valor_compra", "valor_venda") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["aplicacao", "apl"], ["codigo_peca", "cod"], ["created_at", "2017-03-27 22:11:01.716564"], ["estoque", 20], ["grupo", "grupo"], ["info", "info"], ["montadora", "mon"], ["nome", "TESTE CRIADO DE LONGE MAC"], ["num_fabrica", "numf"], ["pratileira", "pratileira"], ["updated_at", "2017-03-27 22:11:01.716564"], ["valor_compra", "R$ 100,00"], ["valor_venda", "R$ 1.000,00"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://172.16.13.86:3000/autopecas/13
+Completed 302 Found in 46ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/autopecas/13" for 172.16.13.111 at 2017-03-27 19:11:01 -0300
+Processing by AutopecasController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mAutopeca Load (0.3ms)[0m  [1mSELECT  "autopecas".* FROM "autopecas"  WHERE "autopecas"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered autopecas/show.html.erb within layouts/application (828.3ms)
+Completed 200 OK in 976ms (Views: 973.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/autopecas?utf8=%E2%9C%93&pecas=&commit=Ver" for 127.0.0.1 at 2017-03-27 19:11:13 -0300
+Processing by AutopecasController#index as HTML
+  Parameters: {"utf8"=>"✓", "pecas"=>"", "commit"=>"Ver"}
+  [1m[35mAutopeca Load (0.3ms)[0m  SELECT "autopecas".* FROM "autopecas"  WHERE (estoque like 0)
+  Rendered autopecas/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 80ms (Views: 77.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2017-03-27 19:11:13 -0300
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2017-03-27 19:11:13 -0300
+
+
+Started GET "/autopecas?utf8=%E2%9C%93&pecas=&commit=Ver" for 127.0.0.1 at 2017-03-27 19:11:18 -0300
+Processing by AutopecasController#index as HTML
+  Parameters: {"utf8"=>"✓", "pecas"=>"", "commit"=>"Ver"}
+  [1m[36mAutopeca Load (0.4ms)[0m  [1mSELECT "autopecas".* FROM "autopecas"  WHERE (estoque like 0)[0m
+  Rendered autopecas/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 84ms (Views: 82.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2017-03-27 19:11:18 -0300
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2017-03-27 19:11:18 -0300
+
+
+Started GET "/autopecas?utf8=%E2%9C%93&pecas=&commit=Ver" for 127.0.0.1 at 2017-03-27 19:11:51 -0300
+Processing by AutopecasController#index as HTML
+  Parameters: {"utf8"=>"✓", "pecas"=>"", "commit"=>"Ver"}
+  [1m[35mAutopeca Load (0.8ms)[0m  SELECT "autopecas".* FROM "autopecas"  WHERE (estoque like 0)
+  Rendered autopecas/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 91ms (Views: 89.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2017-03-27 19:11:51 -0300
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2017-03-27 19:11:51 -0300
+
+
+Started POST "/autopecas/" for 172.16.13.111 at 2017-03-27 19:12:05 -0300
+Processing by AutopecasController#create as */*
+  Parameters: {"nome"=>"TESTE CRIADO DE LONGE ERIVA", "num_fabrica"=>"numf", "montadora"=>"mon", "aplicacao"=>"apl", "valor_compra"=>"R$ 100,00", "valor_venda"=>"R$ 1.000,00", "codigo_peca"=>"cod", "estoque"=>20, "grupo"=>"grupo", "info"=>"info", "pratileira"=>"pratileira", "autopeca"=>{"nome"=>"TESTE CRIADO DE LONGE ERIVA", "num_fabrica"=>"numf", "montadora"=>"mon", "aplicacao"=>"apl", "valor_compra"=>"R$ 100,00", "valor_venda"=>"R$ 1.000,00", "codigo_peca"=>"cod", "estoque"=>20, "grupo"=>"grupo", "info"=>"info", "pratileira"=>"pratileira"}}
+Can't verify CSRF token authenticity
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "autopecas" ("aplicacao", "codigo_peca", "created_at", "estoque", "grupo", "info", "montadora", "nome", "num_fabrica", "pratileira", "updated_at", "valor_compra", "valor_venda") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["aplicacao", "apl"], ["codigo_peca", "cod"], ["created_at", "2017-03-27 22:12:05.154258"], ["estoque", 20], ["grupo", "grupo"], ["info", "info"], ["montadora", "mon"], ["nome", "TESTE CRIADO DE LONGE ERIVA"], ["num_fabrica", "numf"], ["pratileira", "pratileira"], ["updated_at", "2017-03-27 22:12:05.154258"], ["valor_compra", "R$ 100,00"], ["valor_venda", "R$ 1.000,00"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://172.16.13.86:3000/autopecas/14
+Completed 302 Found in 8ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/autopecas/14" for 172.16.13.111 at 2017-03-27 19:12:05 -0300
+Processing by AutopecasController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[35mAutopeca Load (0.2ms)[0m  SELECT  "autopecas".* FROM "autopecas"  WHERE "autopecas"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered autopecas/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 107ms (Views: 105.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/autopecas?utf8=%E2%9C%93&pecas=&commit=Ver" for 127.0.0.1 at 2017-03-27 19:12:17 -0300
+Processing by AutopecasController#index as HTML
+  Parameters: {"utf8"=>"✓", "pecas"=>"", "commit"=>"Ver"}
+  [1m[36mAutopeca Load (0.3ms)[0m  [1mSELECT "autopecas".* FROM "autopecas"  WHERE (estoque like 0)[0m
+  Rendered autopecas/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 89ms (Views: 87.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2017-03-27 19:12:17 -0300
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2017-03-27 19:12:17 -0300
+
+
+Started GET "/autopecas?utf8=%E2%9C%93&pecas=&commit=Ver" for 127.0.0.1 at 2017-03-27 19:12:22 -0300
+Processing by AutopecasController#index as HTML
+  Parameters: {"utf8"=>"✓", "pecas"=>"", "commit"=>"Ver"}
+  [1m[35mAutopeca Load (0.3ms)[0m  SELECT "autopecas".* FROM "autopecas"  WHERE (estoque like 0)
+  Rendered autopecas/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 93ms (Views: 91.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2017-03-27 19:12:22 -0300
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2017-03-27 19:12:22 -0300
+
+
+Started POST "/autopecas/" for 172.16.13.86 at 2017-03-27 19:14:02 -0300
+Processing by AutopecasController#create as */*
+  Parameters: {"nome"=>"TESTE CRIADO DE LONGE", "num_fabrica"=>"numf", "montadora"=>"mon", "aplicacao"=>"apl", "valor_compra"=>"R$ 100,00", "valor_venda"=>"R$ 1.000,00", "codigo_peca"=>"cod", "estoque"=>20, "grupo"=>"grupo", "info"=>"info", "pratileira"=>"pratileira", "autopeca"=>{"nome"=>"TESTE CRIADO DE LONGE", "num_fabrica"=>"numf", "montadora"=>"mon", "aplicacao"=>"apl", "valor_compra"=>"R$ 100,00", "valor_venda"=>"R$ 1.000,00", "codigo_peca"=>"cod", "estoque"=>20, "grupo"=>"grupo", "info"=>"info", "pratileira"=>"pratileira"}}
+Can't verify CSRF token authenticity
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "autopecas" ("aplicacao", "codigo_peca", "created_at", "estoque", "grupo", "info", "montadora", "nome", "num_fabrica", "pratileira", "updated_at", "valor_compra", "valor_venda") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["aplicacao", "apl"], ["codigo_peca", "cod"], ["created_at", "2017-03-27 22:14:02.212420"], ["estoque", 20], ["grupo", "grupo"], ["info", "info"], ["montadora", "mon"], ["nome", "TESTE CRIADO DE LONGE"], ["num_fabrica", "numf"], ["pratileira", "pratileira"], ["updated_at", "2017-03-27 22:14:02.212420"], ["valor_compra", "R$ 100,00"], ["valor_venda", "R$ 1.000,00"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://172.16.13.86:3000/autopecas/15
+Completed 302 Found in 7ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/autopecas/15" for 172.16.13.86 at 2017-03-27 19:14:02 -0300
+Processing by AutopecasController#show as */*
+  Parameters: {"id"=>"15"}
+  [1m[35mAutopeca Load (0.2ms)[0m  SELECT  "autopecas".* FROM "autopecas"  WHERE "autopecas"."id" = ? LIMIT 1  [["id", 15]]
+  Rendered autopecas/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 87ms (Views: 85.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/autopecas?utf8=%E2%9C%93&pecas=&commit=Ver" for 127.0.0.1 at 2017-03-27 19:14:18 -0300
+Processing by AutopecasController#index as HTML
+  Parameters: {"utf8"=>"✓", "pecas"=>"", "commit"=>"Ver"}
+  [1m[36mAutopeca Load (0.3ms)[0m  [1mSELECT "autopecas".* FROM "autopecas"  WHERE (estoque like 0)[0m
+  Rendered autopecas/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 90ms (Views: 88.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2017-03-27 19:14:18 -0300
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2017-03-27 19:14:18 -0300
+
+
+Started GET "/autopecas/new" for 127.0.0.1 at 2017-03-27 19:18:19 -0300
+Processing by AutopecasController#new as HTML
+  Rendered autopecas/_form.html.erb (32.8ms)
+  Rendered autopecas/new.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 100ms (Views: 98.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/monetarynew.js" for 127.0.0.1 at 2017-03-27 19:18:19 -0300
+
+
+Started POST "/autopecas" for 127.0.0.1 at 2017-03-27 19:18:41 -0300
+Processing by AutopecasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VJ5mcTXv16D9RXYnIMQVt6+nG7+MeW7hoNdSOU261WQ=", "autopeca"=>{"nome"=>"teste", "num_fabrica"=>"teste", "montadora"=>"teste", "aplicacao"=>"teste", "valor_compra"=>"R$ 12.121,23", "valor_venda"=>"R$ 121.212,12", "codigo_peca"=>"teste", "estoque"=>"teste", "grupo"=>"teste", "info"=>"teste", "pratileira"=>"teste"}, "commit"=>"Criar Autopeca"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "autopecas" ("aplicacao", "codigo_peca", "created_at", "estoque", "grupo", "info", "montadora", "nome", "num_fabrica", "pratileira", "updated_at", "valor_compra", "valor_venda") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["aplicacao", "teste"], ["codigo_peca", "teste"], ["created_at", "2017-03-27 22:18:41.038228"], ["estoque", 0], ["grupo", "teste"], ["info", "teste"], ["montadora", "teste"], ["nome", "teste"], ["num_fabrica", "teste"], ["pratileira", "teste"], ["updated_at", "2017-03-27 22:18:41.038228"], ["valor_compra", "R$ 12.121,23"], ["valor_venda", "R$ 121.212,12"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/autopecas/16
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/autopecas/16" for 127.0.0.1 at 2017-03-27 19:18:41 -0300
+Processing by AutopecasController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mAutopeca Load (0.2ms)[0m  [1mSELECT  "autopecas".* FROM "autopecas"  WHERE "autopecas"."id" = ? LIMIT 1[0m  [["id", 16]]
+  Rendered autopecas/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 84ms (Views: 81.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2017-03-27 19:18:41 -0300
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2017-03-27 19:18:41 -0300
+
+
+Started GET "/autopecas" for 127.0.0.1 at 2017-03-27 19:18:45 -0300
+Processing by AutopecasController#index as HTML
+  [1m[35mAutopeca Load (0.3ms)[0m  SELECT "autopecas".* FROM "autopecas"
+  Rendered autopecas/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 89ms (Views: 88.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/autopecas/" for 172.16.13.111 at 2017-03-27 19:19:32 -0300
+Processing by AutopecasController#create as */*
+  Parameters: {"nome"=>"Vela do Etios", "num_fabrica"=>"numf", "montadora"=>"mon", "aplicacao"=>"apl", "valor_compra"=>"R$ 100,00", "valor_venda"=>"R$ 1.000,00", "codigo_peca"=>"cod", "estoque"=>20, "grupo"=>"grupo", "info"=>"info", "pratileira"=>"pratileira", "autopeca"=>{"nome"=>"Vela do Etios", "num_fabrica"=>"numf", "montadora"=>"mon", "aplicacao"=>"apl", "valor_compra"=>"R$ 100,00", "valor_venda"=>"R$ 1.000,00", "codigo_peca"=>"cod", "estoque"=>20, "grupo"=>"grupo", "info"=>"info", "pratileira"=>"pratileira"}}
+Can't verify CSRF token authenticity
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "autopecas" ("aplicacao", "codigo_peca", "created_at", "estoque", "grupo", "info", "montadora", "nome", "num_fabrica", "pratileira", "updated_at", "valor_compra", "valor_venda") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["aplicacao", "apl"], ["codigo_peca", "cod"], ["created_at", "2017-03-27 22:19:32.048713"], ["estoque", 20], ["grupo", "grupo"], ["info", "info"], ["montadora", "mon"], ["nome", "Vela do Etios"], ["num_fabrica", "numf"], ["pratileira", "pratileira"], ["updated_at", "2017-03-27 22:19:32.048713"], ["valor_compra", "R$ 100,00"], ["valor_venda", "R$ 1.000,00"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://172.16.13.86:3000/autopecas/17
+Completed 302 Found in 26ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/autopecas/17" for 172.16.13.111 at 2017-03-27 19:19:32 -0300
+Processing by AutopecasController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[35mAutopeca Load (0.2ms)[0m  SELECT  "autopecas".* FROM "autopecas"  WHERE "autopecas"."id" = ? LIMIT 1  [["id", 17]]
+  Rendered autopecas/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 90ms (Views: 88.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/autopecas" for 127.0.0.1 at 2017-03-27 19:19:37 -0300
+Processing by AutopecasController#index as HTML
+  [1m[36mAutopeca Load (0.5ms)[0m  [1mSELECT "autopecas".* FROM "autopecas"[0m
+  Rendered autopecas/index.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 84ms (Views: 82.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2017-03-27 19:19:37 -0300
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2017-03-27 19:19:37 -0300
